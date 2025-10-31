@@ -200,7 +200,7 @@ public class interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_poner_direccionActionPerformed
 
     private void poner_nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_poner_nombreActionPerformed
-        // TODO add your handling code here:
+        Priva
     }//GEN-LAST:event_poner_nombreActionPerformed
 
     private void poner_apellidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_poner_apellidosActionPerformed

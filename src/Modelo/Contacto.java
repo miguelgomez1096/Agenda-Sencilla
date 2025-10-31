@@ -8,6 +8,6 @@ package Modelo;
  *
  * @author migue
  */
-public class modelo {
-    
+public class Contacto {
+
 }

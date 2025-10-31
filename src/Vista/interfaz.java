@@ -4,20 +4,34 @@
  */
 package Vista;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.table.DefaultTableModel;
+import Controlador.Controlador;
+import Modelo.Contacto;
+
 /**
  *
  * @author migue
  */
 public class interfaz extends javax.swing.JFrame {
-    
+
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(interfaz.class.getName());
 
     /**
      * Creates new form interfaz
      */
-    public interfaz() {
-        initComponents();
-    }
+        private Controlador controlador;
+        
+   public interfaz() {
+    initComponents();
+    controlador = new Controlador(); // Inicializa el controlador
+    DefaultTableModel modelo = new DefaultTableModel(
+        new String[]{"id", "nombre", "apellido", "direccion", "celular", "gmail", "ciudad"}, 0
+    );
+    jTable1.setModel(modelo);
+}
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -43,6 +57,12 @@ public class interfaz extends javax.swing.JFrame {
         boton_agregar = new javax.swing.JButton();
         boton_consultar = new javax.swing.JButton();
         boton_eliminar = new javax.swing.JButton();
+        listar_alfabeticamete = new javax.swing.JButton();
+        listar_calles = new javax.swing.JButton();
+        lisrtar_carreras = new javax.swing.JButton();
+        listar_ciudad = new javax.swing.JButton();
+        listar_id_par = new javax.swing.JButton();
+        listar_id_inpar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -120,58 +140,120 @@ public class interfaz extends javax.swing.JFrame {
             }
         });
 
+        listar_alfabeticamete.setText("listar alfabeticamente");
+        listar_alfabeticamete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                listar_alfabeticameteActionPerformed(evt);
+            }
+        });
+
+        listar_calles.setText("listar calles ");
+        listar_calles.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                listar_callesActionPerformed(evt);
+            }
+        });
+
+        lisrtar_carreras.setText("listar carreras ");
+        lisrtar_carreras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lisrtar_carrerasActionPerformed(evt);
+            }
+        });
+
+        listar_ciudad.setText("listar ciudad");
+        listar_ciudad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                listar_ciudadActionPerformed(evt);
+            }
+        });
+
+        listar_id_par.setText("listar id par");
+        listar_id_par.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                listar_id_parActionPerformed(evt);
+            }
+        });
+
+        listar_id_inpar.setText("listar id inpar ");
+        listar_id_inpar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                listar_id_inparActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
+                        .addGap(55, 55, 55)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(nombre_nombre)
-                            .addComponent(nombre_direccion, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(poner_direccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(nombre_email, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(poner_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(42, 42, 42)
-                                    .addComponent(nombre_apellidos, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(boton_agregar))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(boton_agregar)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(poner_apellidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(38, 38, 38)
-                                .addComponent(nombre_telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(nombre_nombre)
+                                    .addComponent(nombre_direccion, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(poner_direccion, javax.swing.GroupLayout.DEFAULT_SIZE, 208, Short.MAX_VALUE)
+                                    .addComponent(poner_nombre))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(nombre_email, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(32, 32, 32)
+                                        .addComponent(nombre_apellidos, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE))))
+                            .addComponent(listar_alfabeticamete))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(243, 243, 243)
+                                .addComponent(poner_telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
-                                .addComponent(poner_telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(poner_email)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(boton_consultar)
-                                .addGap(91, 91, 91)
-                                .addComponent(boton_eliminar))))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(poner_email, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(listar_calles)
+                                            .addComponent(boton_consultar)
+                                            .addComponent(listar_id_inpar))
+                                        .addGap(91, 91, 91)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(listar_ciudad)
+                                            .addComponent(boton_eliminar)
+                                            .addComponent(lisrtar_carreras)))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addComponent(poner_apellidos, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
+                                        .addGap(29, 29, 29)
+                                        .addComponent(nombre_telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(111, 111, 111))))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(58, 58, 58)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 784, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(listar_id_par)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 784, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(64, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nombre_nombre)
-                    .addComponent(poner_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(nombre_apellidos)
-                    .addComponent(poner_apellidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(nombre_telefono)
-                    .addComponent(poner_telefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(nombre_nombre)
+                            .addComponent(poner_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(nombre_apellidos)
+                            .addComponent(poner_apellidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(poner_telefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(nombre_telefono)))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(nombre_direccion)
@@ -183,7 +265,17 @@ public class interfaz extends javax.swing.JFrame {
                     .addComponent(boton_agregar)
                     .addComponent(boton_consultar)
                     .addComponent(boton_eliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(138, 138, 138)
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(listar_alfabeticamete)
+                    .addComponent(listar_calles)
+                    .addComponent(lisrtar_carreras))
+                .addGap(44, 44, 44)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(listar_id_par)
+                    .addComponent(listar_id_inpar)
+                    .addComponent(listar_ciudad))
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(50, Short.MAX_VALUE))
         );
@@ -200,11 +292,13 @@ public class interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_poner_direccionActionPerformed
 
     private void poner_nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_poner_nombreActionPerformed
-        Priva
+
+
     }//GEN-LAST:event_poner_nombreActionPerformed
 
     private void poner_apellidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_poner_apellidosActionPerformed
-        // TODO add your handling code here:
+
+
     }//GEN-LAST:event_poner_apellidosActionPerformed
 
     private void poner_telefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_poner_telefonoActionPerformed
@@ -212,17 +306,79 @@ public class interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_poner_telefonoActionPerformed
 
     private void boton_agregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_agregarActionPerformed
-        // TODO add your handling code here:
+
+        String nombre = poner_nombre.getText();
+        String apellidos = poner_apellidos.getText();
+        String telefono = poner_telefono.getText();
+        String direccion = poner_direccion.getText();
+        String email = poner_email.getText();
+        String ciudad = ""; // Si tienes campo ciudad, agrégalo
+        controlador.agregar_usuario(nombre, apellidos, telefono, direccion, ciudad, email);
+
     }//GEN-LAST:event_boton_agregarActionPerformed
 
     private void boton_consultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_consultarActionPerformed
-        // TODO add your handling code here:
+
+        DefaultTableModel modelo = (DefaultTableModel) jTable1.getModel();
+        controlador.consultar_profesores(modelo);
+
+
     }//GEN-LAST:event_boton_consultarActionPerformed
 
     private void boton_eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_eliminarActionPerformed
-        // TODO add your handling code here:
+
+        int id = Integer.parseInt(javax.swing.JOptionPane.showInputDialog("Ingrese ID a eliminar"));
+        controlador.eliminarPorID(id);
+
     }//GEN-LAST:event_boton_eliminarActionPerformed
 
+    private void listar_ciudadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listar_ciudadActionPerformed
+
+        String ciudad = javax.swing.JOptionPane.showInputDialog("Ingrese ciudad");
+        DefaultTableModel modelo = (DefaultTableModel) jTable1.getModel();
+        controlador.listar_ciudad(modelo, ciudad);
+
+
+    }//GEN-LAST:event_listar_ciudadActionPerformed
+
+    private void listar_id_parActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listar_id_parActionPerformed
+
+        DefaultTableModel modelo = (DefaultTableModel) jTable1.getModel();
+        controlador.listar_ID_par(modelo);
+
+
+    }//GEN-LAST:event_listar_id_parActionPerformed
+
+    private void listar_id_inparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listar_id_inparActionPerformed
+
+        DefaultTableModel modelo = (DefaultTableModel) jTable1.getModel();
+        controlador.listarIDImpar(modelo);
+
+
+    }//GEN-LAST:event_listar_id_inparActionPerformed
+
+    private void listar_alfabeticameteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listar_alfabeticameteActionPerformed
+
+        DefaultTableModel modelo = (DefaultTableModel) jTable1.getModel();
+        controlador.listar_alfabeticamente(modelo);
+
+    }//GEN-LAST:event_listar_alfabeticameteActionPerformed
+
+    private void listar_callesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listar_callesActionPerformed
+
+        DefaultTableModel modelo = (DefaultTableModel) jTable1.getModel();
+        controlador.listar_calles(modelo);
+
+    }//GEN-LAST:event_listar_callesActionPerformed
+
+    private void lisrtar_carrerasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lisrtar_carrerasActionPerformed
+
+        DefaultTableModel modelo = (DefaultTableModel) jTable1.getModel();
+        controlador.listar_carreras(modelo);
+
+    }//GEN-LAST:event_lisrtar_carrerasActionPerformed
+  
+    
     /**
      * @param args the command line arguments
      */
@@ -254,6 +410,12 @@ public class interfaz extends javax.swing.JFrame {
     private javax.swing.JButton boton_eliminar;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
+    private javax.swing.JButton lisrtar_carreras;
+    private javax.swing.JButton listar_alfabeticamete;
+    private javax.swing.JButton listar_calles;
+    private javax.swing.JButton listar_ciudad;
+    private javax.swing.JButton listar_id_inpar;
+    private javax.swing.JButton listar_id_par;
     private javax.swing.JLabel nombre_apellidos;
     private javax.swing.JLabel nombre_direccion;
     private javax.swing.JLabel nombre_email;

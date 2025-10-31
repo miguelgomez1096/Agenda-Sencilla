@@ -24,49 +24,73 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="nombre_nombre" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="nombre_direccion" alignment="0" min="-2" pref="53" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Component id="poner_direccion" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="nombre_email" min="-2" pref="53" max="-2" attributes="0"/>
+                          <Component id="boton_agregar" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="nombre_nombre" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="nombre_direccion" alignment="0" min="-2" pref="53" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" attributes="0">
-                                  <Component id="poner_nombre" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                                  <Component id="nombre_apellidos" min="-2" pref="53" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="poner_direccion" pref="208" max="32767" attributes="0"/>
+                                  <Component id="poner_nombre" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="52" max="32767" attributes="0"/>
+                                      <Component id="nombre_email" min="-2" pref="53" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                                      <Component id="nombre_apellidos" min="-2" pref="53" max="-2" attributes="0"/>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
-                          <Component id="boton_agregar" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="listar_alfabeticamete" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="-2" pref="243" max="-2" attributes="0"/>
+                              <Component id="poner_telefono" min="-2" pref="172" max="-2" attributes="0"/>
+                          </Group>
                           <Group type="102" attributes="0">
-                              <Component id="poner_apellidos" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                              <Component id="nombre_telefono" min="-2" pref="53" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="poner_telefono" min="-2" pref="125" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="poner_email" max="32767" attributes="0"/>
-                          <Group type="102" attributes="0">
-                              <Component id="boton_consultar" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
-                              <Component id="boton_eliminar" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="poner_email" min="-2" pref="298" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="listar_calles" min="-2" max="-2" attributes="0"/>
+                                          <Component id="boton_consultar" min="-2" max="-2" attributes="0"/>
+                                          <Component id="listar_id_inpar" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="listar_ciudad" min="-2" max="-2" attributes="0"/>
+                                          <Component id="boton_eliminar" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lisrtar_carreras" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="poner_apellidos" pref="131" max="32767" attributes="0"/>
+                                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                                      <Component id="nombre_telefono" min="-2" pref="53" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
                           </Group>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" min="-2" pref="784" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="listar_id_par" min="-2" max="-2" attributes="0"/>
+                          <Component id="jScrollPane1" min="-2" pref="784" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
               <EmptySpace pref="64" max="32767" attributes="0"/>
@@ -76,14 +100,21 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="nombre_nombre" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="poner_nombre" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="nombre_apellidos" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="poner_apellidos" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="nombre_telefono" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="poner_telefono" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="nombre_nombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="poner_nombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="nombre_apellidos" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="poner_apellidos" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="poner_telefono" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="nombre_telefono" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -98,7 +129,19 @@
                   <Component id="boton_consultar" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="boton_eliminar" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="138" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="listar_alfabeticamete" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="listar_calles" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lisrtar_carreras" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="listar_id_par" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="listar_id_inpar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="listar_ciudad" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="188" max="-2" attributes="0"/>
               <EmptySpace pref="50" max="32767" attributes="0"/>
           </Group>
@@ -153,6 +196,33 @@
                 <Column editable="true" title="Title 4" type="java.lang.Object"/>
               </Table>
             </Property>
+            <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+              <TableColumnModel selectionModel="0">
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+              </TableColumnModel>
+            </Property>
+            <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+              <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+            </Property>
           </Properties>
         </Component>
       </SubComponents>
@@ -199,6 +269,54 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="boton_eliminarActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="listar_alfabeticamete">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="listar alfabeticamente"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="listar_alfabeticameteActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="listar_calles">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="listar calles "/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="listar_callesActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="lisrtar_carreras">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="listar carreras "/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="lisrtar_carrerasActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="listar_ciudad">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="listar ciudad"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="listar_ciudadActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="listar_id_par">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="listar id par"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="listar_id_parActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="listar_id_inpar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="listar id inpar "/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="listar_id_inparActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

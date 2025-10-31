@@ -8,6 +8,6 @@ package Vista;
  *
  * @author migue
  */
-public class vista {
+class Modelo {
     
 }

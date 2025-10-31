@@ -9,6 +9,7 @@ package Controlador;
  * @author migue
  */
 import java.sql.*;
+import javax.swing.table.DefaultTableModel;
 public class Controlador {
 
     //contraseña y usuario 
@@ -68,6 +69,20 @@ public class Controlador {
             System.out.println("Error en el sql");
         }
     }
+
+// Eliminar por ID
+public void eliminarPorID(int id) {
+    Connection con = conectar();
+    String query = "DELETE FROM profesores WHERE id = ?";
+    try {
+        PreparedStatement preparar = con.prepareStatement(query);
+        preparar.setInt(1, id);
+        preparar.executeUpdate();
+        System.out.println("Registro eliminado correctamente");
+    } catch (SQLException ex) {
+        System.out.println("Error al eliminar: " + ex.getMessage());
+    }
+}
     
 //funciones de busqueda
     //listar campo en especifico 
